@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'test'], function(){
     Route::get('index', 'TestController@index');
+    Route::get('job', 'TestController@testJob');
 });

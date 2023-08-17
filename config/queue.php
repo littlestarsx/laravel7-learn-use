@@ -62,9 +62,9 @@ return [
         'redis' => [
             'driver' => 'redis',
             'connection' => env('QUEUE_REDIS_CONNECTION', 'default'),
-            'queue' => env('REDIS_QUEUE', 'default'),
+            'queue' => env('REDIS_QUEUE', '{default}'),
             'retry_after' => 90,
-            'block_for' => null,
+            'block_for' => null, //将任务重新放入 Redis 数据库以及处理器轮询之前阻塞多久 eg:5 (5秒)
         ],
 
     ],
